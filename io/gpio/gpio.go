@@ -57,6 +57,22 @@ func (d *Device) SetDirection(pin int, dir Direction) error {
 	return d.conn.SetDirection(pin, driver.Direction(dir))
 }
 
+func (d *Device) SetActive(pin int, v int) error {
+	panic("not implemented")
+}
+
+func (d *Device) SetEdge(pin int, edge Edge) error {
+	panic("not implemented")
+}
+
+func (d *Device) Poll(pin int) ([]byte, error) {
+	panic("not yet implemented")
+}
+
+func (d *Device) AckPoll(pin int) error {
+	panic("not yet implemented")
+}
+
 // Close closes the device and frees the resources.
 func (d *Device) Close() error {
 	return d.conn.Close()
